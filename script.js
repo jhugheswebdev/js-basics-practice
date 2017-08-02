@@ -328,11 +328,11 @@ console.log(mike);
 // Lecture: Loops
 
 // For Loops
+/*
 for (var i = 0; i < 10; i++) {
     console.log(i);
 }
 
-/*
 0, true, print 0, update i to 1
 1, true, print 1, update i to 2
 .
@@ -379,3 +379,29 @@ for (var i = 1; i <= 5; i++) {
 
 /////////////////////////////////
 // CODING CHALLENGE 2
+
+
+function printFullAge(yearOfBirth) {
+    var ages = [];
+    var fullAges = []
+
+    for (i = 0; i < yearOfBirth.length; i++) {
+            ages[i] = 2017 - yearOfBirth[i];
+    }
+
+    for (i = 0; i < ages.length; i++) {
+        if (ages[i] >= 18) {
+            console.log('Person ' + (i + 1) + ' is ' + ages[i] + " " + "full age ");
+            fullAges.push(true);
+        } else {
+            console.log('Person ' + (i + 1) + ' is ' + ages[i] + " " + 'not full age ');
+            fullAges.push(false);
+        }
+    }
+
+    return fullAges;
+}
+
+var yearOfBirth = [1990, 1979, 1920, 2001];
+var full_1 = printFullAge(yearOfBirth);
+var full_2 = printFullAge([2012, 1915, 1999]);
